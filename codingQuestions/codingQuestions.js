@@ -110,3 +110,17 @@ for(var i=0; i<len3; i++) {
 }
 console.log(max)
 
+
+// remove duplicate words from string
+var str3 = "mango apple orange mango banana guava grapes apple orange"
+var arr3 = str3.split(" ")
+var len3 = arr3.length
+var unique1 = [];
+
+for(var i=0; i<len3; i++) {
+    if (unique1.indexOf(arr3[i]) === -1) {
+        unique1.push(arr3[i])
+    }
+}
+
+console.log(unique1)

@@ -30,6 +30,8 @@ for( var i=0; i<arr1.length; i++) {
 }
 console.log(unique)
 
+
+//get the repeated element from a string
 let str1 = "mango banana mango apple grapes orange"
 let arr2 = str1.split(" ")
 let lenn = arr2.length;
@@ -51,3 +53,17 @@ for(let word in repeated) {
     }
 }
 
+// find each character length
+var input = ["a","a","b","b","b","c","c","c","c"]
+var numbeChar = {};
+
+for(var i=0;i<input.length; i++) {
+    let word5 = input[i]
+    if(numbeChar[word5] === undefined) {
+        numbeChar[word5] = 1
+    }
+    else {
+        numbeChar[word5]++;
+    }
+}
+console.log(numbeChar)
