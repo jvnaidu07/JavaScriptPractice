@@ -27,3 +27,21 @@ var person = {
     }
 }
 console.log(myFood = "joe biden")
+
+
+
+var myName = {
+    n1: "asdd",
+    n2:"asd",
+    n3: "wed",
+    get names () {
+        return this.n1+this.n2+this.n3
+    },
+    set names(value) {
+        var name = value.split(" ")
+        this.n1 = name[0]
+        this.n2 = name[1]
+        this.n3 = name[2]
+    }
+}
+console.log(names = "eqw eqqw qdwq")

@@ -34,13 +34,13 @@ for (let i of arr4) {
 }
 
 let sor1 = newArr1.sort(function (a, b) {
-    return a-b;
+    return a - b;
 })
 
 console.log(sor1)
 var result1 = arr4.filter((val) => val.length === sor1[0])
 
-console.log("maximum length of array" + ' '+ result1.join())
+console.log("maximum length of array" + ' ' + result1.join())
 
 // find repeated words from the array
 
@@ -86,11 +86,11 @@ for (let word1 in repeated1) {
 
 // remove duplicate characters using string as well as array
 
-var arr2 = ["mango", "apple", "orange", "mango", "banana", "guava", "grapes","apple", "orange"]
+var arr2 = ["mango", "apple", "orange", "mango", "banana", "guava", "grapes", "apple", "orange"]
 var len2 = arr2.length
 var unique = [];
 
-for(var i=0; i<len2; i++) {
+for (var i = 0; i < len2; i++) {
     if (unique.indexOf(arr2[i]) === -1) {
         unique.push(arr2[i])
     }
@@ -99,12 +99,12 @@ for(var i=0; i<len2; i++) {
 console.log(unique)
 
 // Write a JavaScript function to find the highest value in an array
-var arr3 = [1,2,35,1,2,6,41,89,2]
+var arr3 = [1, 2, 35, 1, 2, 6, 41, 89, 2]
 var len3 = arr3.length;
 var max = arr3[0]
 
-for(var i=0; i<len3; i++) {
-    if(max < arr3[i]) {
+for (var i = 0; i < len3; i++) {
+    if (max < arr3[i]) {
         max = arr3[i]
     }
 }
@@ -117,7 +117,7 @@ var arr3 = str3.split(" ")
 var len3 = arr3.length
 var unique1 = [];
 
-for(var i=0; i<len3; i++) {
+for (var i = 0; i < len3; i++) {
     if (unique1.indexOf(arr3[i]) === -1) {
         unique1.push(arr3[i])
     }
