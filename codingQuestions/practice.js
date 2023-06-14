@@ -1,6 +1,11 @@
-if(1==2 || 2==4){
-    console.log("one or two are true")
+
+var arrr = ["mango", "apple", "orange", "apple", "mango", "banana", "guava", "grapes"]
+var len = arrr.length;
+var remdup = [];
+
+for (var i=0; i<len; i++) {
+    if (remdup.indexOf(arrr[i]) === -1) {
+        remdup.push(arrr[i])
+    }
 }
-else {
-    console.log("one or 2 are not true")
-}
+console.log(remdup)
