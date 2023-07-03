@@ -25,6 +25,7 @@ import { domColors } from "../fixtures/colorObj"
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+<<<<<<< HEAD
 Cypress.Commands.add("validateText", (country,city,height,built,rank)=>{
     cy.get("tbody[style='margin:0;padding:0'] td").contains(country).should('have.text', country)
     cy.contains(city).should('have.text', city)
@@ -64,4 +65,6 @@ Cypress.Commands.add("validateDemoWebsitesTitles", ()=>{
     cy.get(".ez-toc-list-level-3 li")
 
 })
+=======
+>>>>>>> cc86792e0bf45089374a634522146aea802818f2
 require("@4tw/cypress-drag-drop");

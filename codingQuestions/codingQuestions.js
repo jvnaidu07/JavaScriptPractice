@@ -131,10 +131,18 @@ var str = str.join("").replace(" ", "")
 let len4 = str.length;
 let rev = '';
 
+<<<<<<< HEAD
 for (var i = len4 - 1; i >= 0; i--) {
+=======
+for(var i=len4-1; i>=0; i--) {
+>>>>>>> cc86792e0bf45089374a634522146aea802818f2
     rev += str[i]
 }
 
 console.log(rev)
 var res = str === rev ? "palindrome" : "not a palindrome"
+<<<<<<< HEAD
 console.log("reverse string " + ' ' + res)
+=======
+console.log("reverse string " + ' ' +res)
+>>>>>>> cc86792e0bf45089374a634522146aea802818f2

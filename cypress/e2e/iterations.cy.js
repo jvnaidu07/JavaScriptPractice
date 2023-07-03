@@ -46,7 +46,10 @@ context("iterations using forEach", () => {
             DomElements.push($el.text())
             cy.wrap(getText).should('eq', DomElements.join(" "))
             expect(getText).to.contain(DomElements.join(" "))
+<<<<<<< HEAD
             expect(getText).to.eq(DomElements.join(""))
+=======
+>>>>>>> cc86792e0bf45089374a634522146aea802818f2
         })
         cy.get(".large-2.columns a").should('have.class', 'button')
     })
@@ -68,10 +71,17 @@ context("iterations using forEach", () => {
     })
     it.only("navigate to colors using forEach", () => {
         cy.visit("https://colorhunt.co/palette/b9f3e4ea8feaffaacff6e6c2")
+<<<<<<< HEAD
         cy.fillBgColors() // this is from command.js dynamically
         // cy.get(".singleItem .palette div").each((el, index) => {
         //     cy.wrap(el).should('have.attr', `style`, `background-color:${domColors.colorItems3[index]}`)        
         // })
     })
     
+=======
+        cy.get(".singleItem .palette div").each((el, index) => {
+            cy.wrap(el).should('have.attr', `style`, `background-color:${domColors.colorItems3[index]}`)        
+        })
+    })
+>>>>>>> cc86792e0bf45089374a634522146aea802818f2
 })
