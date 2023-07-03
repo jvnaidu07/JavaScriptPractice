@@ -1,6 +1,8 @@
-if(1==2 || 2==4){
-    console.log("one or two are true")
+var str = "mom";
+var len = str.length;
+var rev = '';
+
+for (var i=len-1; i>=0; i--) {
+    rev += str[i]
 }
-else {
-    console.log("one or 2 are not true")
-}
+console.log(rev)

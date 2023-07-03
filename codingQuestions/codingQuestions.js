@@ -110,7 +110,6 @@ for (var i = 0; i < len3; i++) {
 }
 console.log(max)
 
-
 // remove duplicate words from string
 var str3 = "mango apple orange mango banana guava grapes apple orange"
 var arr3 = str3.split(" ")
@@ -118,9 +117,24 @@ var len3 = arr3.length
 var unique1 = [];
 
 for (var i = 0; i < len3; i++) {
-    if (unique1.indexOf(arr3[i]) === -1) {
-        unique1.push(arr3[i])
+    if (unique1.indexOf(arr3[i]) === -1) { //indexOf() method returns -1 if the value is not found
+        unique1.push(arr3[i]) //The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
     }
 }
 
 console.log(unique1)
+
+//reverse string
+var str = ["nurses run"]
+
+var str = str.join("").replace(" ", "")
+let len4 = str.length;
+let rev = '';
+
+for (var i = len4 - 1; i >= 0; i--) {
+    rev += str[i]
+}
+
+console.log(rev)
+var res = str === rev ? "palindrome" : "not a palindrome"
+console.log("reverse string " + ' ' + res)
