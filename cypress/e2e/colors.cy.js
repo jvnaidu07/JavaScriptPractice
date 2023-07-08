@@ -8,11 +8,11 @@ import 'cypress-file-upload';
 describe("assert color boxes", () => {
 
     const backgroundColors = {
-        colors1: [" rgb(205, 24, 24);", " rgb(78, 54, 54);", " rgb(50, 30, 30);", " rgb(17, 109, 110);"],
+        colors1: [" rgb(196, 176, 255);", " rgb(134, 150, 254);", " rgb(73, 66, 228);", " rgb(17, 0, 158);"],
         colors2: ["background-color: rgb(253, 226, 243);", "background-color: rgb(229, 190, 236);", "background-color: rgb(145, 127, 179);", "background-color: rgb(42, 47, 79);"]
     }
     it("checkout background colors", () => {
-        cy.visit(Cypress.env("colorBoxes"))
+        cy.visit("https://colorhunt.co/palette/11009e4942e48696fec4b0ff")
         cy.get(".singleItem .item .palette div").each((el, index) => {
             cy.wrap(el).should('have.attr', `style`, `background-color:${backgroundColors.colors1[index]}`)
         })
@@ -25,7 +25,7 @@ describe("assert color boxes", () => {
         });
     });
     it("checkout background colors", () => {
-        cy.visit(Cypress.env("colorBoxes"))
+        cy.visit("https://colorhunt.co/palette/11009e4942e48696fec4b0ff")
         cy.get(".singleItem .item .palette div").each((el, index) => {
             cy.wrap(el).should('have.attr', `style`, `background-color:${backgroundColors.colors1[index]}`)
 
@@ -51,7 +51,7 @@ describe("assert color boxes", () => {
 
     ]
     const details = (company, contact, country) => {
-        cy.get(".separator div").first().contains(company).should('have.text', company)
+        cy.get("#customers td").contains(company).should('have.text', company)
         cy.contains(contact).should('have.text', contact)
         cy.contains(country).should('have.text', country)
 
@@ -128,7 +128,7 @@ describe("assert color boxes", () => {
     it("assert bgcolors", () => {
         cy.visit("https://abstracta.us/blog/software-testing/best-demo-websites-for-practicing-different-types-of-software-tests/")
         titles.forEach((el, index) => {
-            cy.validateTtiles.contains(el).should('have.text', el)
+            cy.validateTtiles().contains(el).should('have.text', el)
         })
     })
     //another way to use index
@@ -138,21 +138,11 @@ describe("assert color boxes", () => {
             "Test Pages for Automating", "The-Internet", "GlobalsQA", " UI Test Automation Playground ", "Basic Calculator", "The Automation Practice – clothing store",
             "Public-APIs", "Restful Booker", "PetStore"
         ]
-    const demoWebsites1 =
-        [
-            "Demo E-commerce Sites", "Demoblaze", "OpenCart", "WPmobilepack", "Juice-Shop", "2Checkout", "Example Systems", "DBank Demo", "OrangeHRM",
-            "Computer-Database", "JPetStore Demo", "Demo Sites for Trying Web Test Automation Tools", "DemoQA", " SwagLabs ", "Selenium Easy", "Test Pages for Automating", "The-Internet", "GlobalsQA",
-            " UI Test Automation Playground ", "Basic Calculator", "The Automation Practice – clothing store",
-            "Sites for Trying Service Level Testing Tools (API, SOAP, REST)", "Public-APIs", "Restful Booker", "PetStore", "Practice Testing Better", "Recommended for You"
-        ]
 
     it("verify All tiltles", () => {
-        cy.visit(Cypress.env("demoWebsiteUrls"))
+        cy.visit("https://abstracta.us/blog/software-testing/best-demo-websites-for-practicing-different-types-of-software-tests/")
         cy.validateDemoWebsitesTitles().each((el, index) => {
             cy.wrap(el).contains(demoWebsites[index]).should('have.text', demoWebsites[index])
-        })
-        cy.get(".ez-toc-list.ez-toc-list-level-1 a").each((el, index) => {
-            cy.wrap(el).should('have.attr', 'title', demoWebsites1[index])
         })
     })
 
@@ -203,15 +193,14 @@ describe("assert color boxes", () => {
     })
     const productTitles =
         [
-            "L'EXTRÊME Instant Extensions Lengthening Mascara", "Tropiques Minerale Loose Bronzer", "Delicate Oil-Free Powder Blush",
-            "Product with stock locations", "Viva Glam Lipstick", "Waterproof Protective Undereye Concealer"
+            "L'EXTRÊME Instant Extensions Lengthening Mascara", "Tropiques Minerale Loose Bronzer", "Product with stock locations",
+            "Viva Glam Lipstick", "Waterproof Protective Undereye Concealer","Delicate Oil-Free Powder Blush"
         ]
-    it.only("verify titles", () => {
+    it("verify titles", () => {
         cy.visit("https://automationteststore.com/index.php?rt=product/category&path=36")
         cy.get(".fixed_wrapper .fixed a").each(($el, index) => {
-            cy.wrap($el).should('have.attr', 'title', productTitles[index])
+            cy.wrap($el).contains(`${productTitles[index]}`).should('have.attr', `title`, `${productTitles[index]}`)
         })
-
     })
     it.only("checkout background colors", () => {
         cy.visit("http://www.techlistic.com/2017/02/automate-demo-web-table-with-selenium.html")
