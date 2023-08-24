@@ -7,5 +7,8 @@ var answer = prompt("what is your favourite color")
 if(answer == "blue") {
     console.log("this is my favourite color")
 }
+else {
+    console.log("this is not my fav fruit")
+}
 
 

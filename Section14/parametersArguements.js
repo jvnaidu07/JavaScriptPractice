@@ -37,3 +37,6 @@ else if (cashier(answer) > 0) {
 else {
     console.log("u dont have money")
 }
+
+var numm = 45
+console.log(45**45) // ** to the power

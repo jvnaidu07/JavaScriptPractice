@@ -77,12 +77,16 @@ describe("Test Contact Us form via Automation test store", () => {
             cy.go('back')
         })      
     })
-    it.only("async websites ", () => {
+    it("async websites ", () => {
         cy.visit("https://artoftesting.com/samplesiteforselenium")
         cy.get("#fname").type("naidu")
         cy.get("button[type= 'button']").then($el =>{
             const btn = $el.attr("type") //here attribute is type
             cy.wrap($el).click().should('not.have.class', 'cls')
         })            
+    })
+    it.only("verify drop down values", ()=>{
+        cy.visit("https://www.globalsqa.com/demo-site/select-dropdown-menu/");
+        cy.get(".twelve.columns div div div p select").select('Afghanistan').should('have.value', 'AFG')
     })
 })

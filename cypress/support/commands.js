@@ -64,4 +64,5 @@ Cypress.Commands.add("validateDemoWebsitesTitles", ()=>{
     cy.get(".ez-toc-list-level-3 li")
 
 })
+
 require("@4tw/cypress-drag-drop");

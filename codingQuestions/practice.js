@@ -1,22 +1,21 @@
-<<<<<<< HEAD
-var str = "mom";
-var len = str.length;
-var rev = '';
+let a = ["this is javascript and i am learning i"]
+let b = a.join("").split(" ");
+let len = b.length
+let repeated = {};
 
-for (var i=len-1; i>=0; i--) {
-    rev += str[i]
-}
-console.log(rev)
-=======
-
-var arrr = ["mango", "apple", "orange", "apple", "mango", "banana", "guava", "grapes"]
-var len = arrr.length;
-var remdup = [];
-
-for (var i=0; i<len; i++) {
-    if (remdup.indexOf(arrr[i]) === -1) {
-        remdup.push(arrr[i])
+for(var i=0; i<len; i++) {
+    let word = b[i]
+    if(repeated[word] == undefined) {
+        repeated[word] = 1
+    }
+    else {
+        repeated[word]++
     }
 }
-console.log(remdup)
->>>>>>> cc86792e0bf45089374a634522146aea802818f2
+
+for (let word in repeated) {
+    if(repeated[word]>1){
+        console.log(word)
+    }
+}
+console.log(a.join("").length)

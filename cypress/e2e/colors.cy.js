@@ -202,7 +202,7 @@ describe("assert color boxes", () => {
             cy.wrap($el).contains(`${productTitles[index]}`).should('have.attr', `title`, `${productTitles[index]}`)
         })
     })
-    it.only("checkout background colors", () => {
+    it("checkout background colors", () => {
         cy.visit("http://www.techlistic.com/2017/02/automate-demo-web-table-with-selenium.html")
         tableDetails.forEach(ele => {
             details(ele.company, ele.contact, ele.country)

@@ -23,6 +23,7 @@ for (let i of arr) {
 let sor = newArr.sort(function (a, b) {
     return b - a;
 })
+
 // find minimum length from string
 
 var str4 = "this is javascript and i am learning"
@@ -80,7 +81,7 @@ for (var i = 0; i < arr1.length; i++) {
 
 for (let word1 in repeated1) {
     if (repeated1[word1] > 1) {
-        console.log(word1)
+        console.log("repeated word is" + " " + word1)
     }
 }
 
@@ -131,18 +132,23 @@ var str = str.join("").replace(" ", "")
 let len4 = str.length;
 let rev = '';
 
-<<<<<<< HEAD
 for (var i = len4 - 1; i >= 0; i--) {
-=======
-for(var i=len4-1; i>=0; i--) {
->>>>>>> cc86792e0bf45089374a634522146aea802818f2
     rev += str[i]
 }
 
 console.log(rev)
 var res = str === rev ? "palindrome" : "not a palindrome"
-<<<<<<< HEAD
 console.log("reverse string " + ' ' + res)
-=======
-console.log("reverse string " + ' ' +res)
->>>>>>> cc86792e0bf45089374a634522146aea802818f2
+
+//find maximum number from an array
+let ar4 = [1,2,1,3,,4,5,56,1,2,3]
+let lenn4 = ar4.length;
+
+let maxx = ar4[0] 
+
+for (let i=0; i<lenn4; i++) {
+    if (ar4[i] > maxx) {
+        maxx = ar4[i]
+    }
+}
+console.log(maxx)

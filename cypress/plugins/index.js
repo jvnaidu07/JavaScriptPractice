@@ -1,4 +1,7 @@
 /// <reference types="cypress" />
+
+const { writeXLSX } = require("xlsx");
+
 // ***********************************************************
 // This example plugins/index.js can be used to load plugins
 //
@@ -29,3 +32,24 @@ window.process = {
   argv: [],
   env: {},
  };
+ 
+const xlsx = require('node-xlsx').default;
+const fs = require('fs'); //for file
+const path = require('path'); //for file path
+const { config, reject } = require("bluebird");
+module.exports = (on, config) =>{
+  on('task', { parseXlsx({ filepath})
+  { return new Promise((resolve, reject)=>
+    {try
+      {
+        const jsonData = xlsx.parse(fs.readFileSync(filepath));
+        resolve(jsonData);
+      }catch (e)
+      {
+        reject(e);
+       }});
+
+  }
+})
+}
+

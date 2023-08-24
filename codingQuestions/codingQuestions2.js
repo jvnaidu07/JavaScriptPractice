@@ -30,7 +30,6 @@ for( var i=0; i<arr1.length; i++) {
 }
 console.log(unique)
 
-
 //get the repeated element from a string
 let str1 = "mango banana mango apple grapes orange"
 let arr2 = str1.split(" ")

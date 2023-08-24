@@ -12,3 +12,8 @@ console.log(len)
 //here calculating number of words in the string
 var result = story.split(" ").length
 console.log(result)
+
+var str = "this is javascript"
+var hmm = str.replace(/ /g,"")
+console.log(str.split(" ").length)
+console.log(hmm.length)

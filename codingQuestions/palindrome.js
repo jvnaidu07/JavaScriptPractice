@@ -1,4 +1,3 @@
-const { concat } = require("lodash");
 
 // assignment palindrome
 var str = "race car";
