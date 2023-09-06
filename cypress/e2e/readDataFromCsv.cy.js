@@ -26,7 +26,7 @@ describe("read data from csv", ()=>{
         cy.get("#txtPWD").type(table[0]['password'])
     })
     const fillText = new practices();
-    it.skip("fill the text using csv file", ()=>{
+    it("fill the text using csv file", ()=>{
         cy.visit("https://demo.guru99.com/test/newtours/register.php")
         cy.url().should('include', 'php')
         cy.url().should('contain', 'register.php')

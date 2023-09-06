@@ -11,5 +11,8 @@ class practices{
     fisrValue() {
         return this.enterValues(1)
     }
+    selectIndia() {
+        return cy.get("select[name='country']")
+    }
 }
 export default practices

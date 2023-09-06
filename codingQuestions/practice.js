@@ -1,21 +1,11 @@
-let a = ["this is javascript and i am learning i"]
-let b = a.join("").split(" ");
-let len = b.length
-let repeated = {};
+let a = [10,20,50,10,60,20,45,15]
+let b = a.length;
 
-for(var i=0; i<len; i++) {
-    let word = b[i]
-    if(repeated[word] == undefined) {
-        repeated[word] = 1
-    }
-    else {
-        repeated[word]++
+let unique = []
+
+for (var i=0; i<b; i++) {
+    if (unique.indexOf(a[i]) === -1) {
+        unique.push(a[i])
     }
 }
-
-for (let word in repeated) {
-    if(repeated[word]>1){
-        console.log(word)
-    }
-}
-console.log(a.join("").length)
+console.log(unique)

@@ -12,11 +12,12 @@ context("read csv file", ()=>{
         }).then(console.table)
     })
 
-
-    const list = new practices();
+    const enterText = new practices();
 
     it("get text from csv file", ()=>{
-        cy.visit("https://demo.guru99.com/test/newtours/register.php")
+        cy.visit("https://demo.guru99.com/test/newtours/register.php");
+        cy.validateUrl();
+
         
     })
 })

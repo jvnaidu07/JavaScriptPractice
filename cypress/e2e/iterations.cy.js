@@ -66,6 +66,13 @@ context("iterations using forEach", () => {
 
         })
     })
+
+    // Cypress.Commands.add("fillBgColors", () => {
+    //     cy.get(".singleItem .palette div").each((el, index) => {
+    //         cy.wrap(el).should('have.attr', `style`, `background-color:${domColors.colorItems3[index]}`)
+    //     })
+
+    // })
     it.only("navigate to colors using forEach", () => {
         cy.visit("https://colorhunt.co/palette/b9f3e4ea8feaffaacff6e6c2")
         cy.fillBgColors() // this is from command.js dynamically

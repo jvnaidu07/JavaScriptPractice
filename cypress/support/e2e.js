@@ -12,20 +12,14 @@
 // You can read more here:
 // https://on.cypress.io/configuration
 // ***********************************************************
-Cypress.on('uncaught:exception', (err, runnable) => {
-    // returning false here prevents Cypress from
-    // failing the test
-    return false
-})
-Cypress.on('uncaught:exception', () => false)
 
-window.process = {
-    argv: [],
-    env: {},
-   };
 // Import commands.js using ES2015 syntax:
 import './commands'
-import "cypress-real-events/support"
 
 // Alternatively you can use CommonJS syntax:
+// require('./commands')
+Cypress.on('uncaught:exception', (err, runnable) => {
+    return false
+})
+
 // require('./commands')
