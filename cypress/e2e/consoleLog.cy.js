@@ -67,9 +67,19 @@ describe("read data from csv", () => {
         }).then(() => {
             cy.log(sum)
             expect(sum).to.eq(236)
-
         })
+        cy.get(".level-top.ui-corner-all").eq(1).trigger('mouseover');
+        cy.contains('Gear').trigger('mouseover')
+        cy.contains('Training').trigger('mouseover')
+        cy.get(".level-top.ui-corner-all", {timeout:30000}).eq(2).trigger('mouseover');
+        cy.contains('Tops').click({force:true});
+        cy.titles();
+        // const productTitles = ["\n\nBreathe-Easy Tank \n", "\n\nAntonia Racer Tank \n","\n\nMaya Tunic \n","\n\nChloe Compete Tank \n", "\n\nLeah Yoga Top \n",
+        // "\n\nNona Fitness Tank \n", "\n\nNora Practice Tank \n","\n\nZoe Tank \n","\n\nBella Tank \n","\n\nLucia Cross-Fit Bra \n","\n\nPrima Compete Bra Top \n",
+        // "\n\nCeleste Sports Bra \n", "\n\n\n\n"]
+        // cy.get(".product-item-info strong").each((el,index)=>{
+        //     cy.wrap(el).should('have.text', `${productTitles[index]}`)
 
+        // })
     })
-
 })

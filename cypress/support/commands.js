@@ -26,6 +26,7 @@ import { domColors } from "../fixtures/colorObj"
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+require("@4tw/cypress-drag-drop");
 Cypress.Commands.add("validateText", (country, city, height, built, rank) => {
     cy.get("tbody[style='margin:0;padding:0'] td").contains(country).should('have.text', country)
     cy.contains(city).should('have.text', city)
@@ -70,6 +71,16 @@ Cypress.Commands.add("validateUrl", () => {
     cy.url().should('contain', 'register.php')
 
 })
+const productTitles = ["\n\nBreathe-Easy Tank \n", "\n\nAntonia Racer Tank \n", "\n\nMaya Tunic \n", "\n\nChloe Compete Tank \n", "\n\nLeah Yoga Top \n",
+    "\n\nNona Fitness Tank \n", "\n\nNora Practice Tank \n", "\n\nZoe Tank \n", "\n\nBella Tank \n", "\n\nLucia Cross-Fit Bra \n", "\n\nPrima Compete Bra Top \n",
+    "\n\nCeleste Sports Bra \n", "\n\n\n\n"]
+
+Cypress.Commands.add("titles", () => {
+
+    cy.get(".product-item-info strong").each((el, index) => {
+        cy.wrap(el).should('have.text', `${productTitles[index]}`)
+
+    })
+});
 
 
-//require("@4tw/cypress-drag-drop");

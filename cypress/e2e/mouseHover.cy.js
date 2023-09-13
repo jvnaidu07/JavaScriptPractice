@@ -7,6 +7,6 @@ describe("mouse hover", () => {
         cy.get("#categorymenu > nav > ul > li:nth-child(2) > a").realHover('mouseover')
 
         cy.get("#categorymenu > nav > ul > li:nth-child(2) > a").click();
-        cy.get(".fixed").first().click()
+        cy.get(".fixed").first().click();
     })
 })

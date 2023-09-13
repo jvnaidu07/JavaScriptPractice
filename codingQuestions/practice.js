@@ -1,11 +1,14 @@
-let a = [10,20,50,10,60,20,45,15]
-let b = a.length;
+// compute maximum length of the string
+let a = "this is javascript and i am learning";
+let b =a.split(" ");
+let newAr = [];
 
-let unique = []
-
-for (var i=0; i<b; i++) {
-    if (unique.indexOf(a[i]) === -1) {
-        unique.push(a[i])
-    }
+for (var i of b) {
+    newAr.push(i.length)
 }
-console.log(unique)
+let sor = newAr.sort(function (a,b){
+    return b-a;
+})
+let result = b.filter((val)=> val.length === sor[0])
+console.log(result.join(""))
+console.log(sor[0])
