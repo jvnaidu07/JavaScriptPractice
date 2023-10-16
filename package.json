@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "cypress": "^12.17.4",
+    "cypress-real-events": "^1.10.3",
     "neat-csv": "^5.2.0",
     "rgb-hex": "^4.1.0"
   },
@@ -8,7 +9,9 @@
     "cy:run": "cypress run",
     "runSingleFile": "npx cypress run --spec cypress/e2e/colors.cy.js",
     "cy:parallel": "cypress-parallel -s cy:run -t 2 -d cypress/e2e/colors.cy.js",
-    "runSingle_folder": "npx cypress run --spec cypress/e2e/API"
+    "runSingle_folder": "npx cypress run --spec cypress/e2e/API",
+    "runApi": "npx cypress run --spec cypress/e2e/HIGHpRACTICES",
+    "runSingleFilee": "npx cypress run --spec cypress\\e2e\\HIGHpRACTICES\\google1.cy.js run"
   },
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^2.2.4"

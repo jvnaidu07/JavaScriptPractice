@@ -13,4 +13,7 @@ let len = arr.length
 console.log(len)
 arr.unshift("coconut", "pineapple")
 console.log(arr)
+arr.join(" ")
+let result = arr.filter(val => val.length != 'you')
+console.log(result)
 

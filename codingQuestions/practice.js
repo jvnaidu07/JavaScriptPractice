@@ -1,14 +1,9 @@
-// compute maximum length of the string
-let a = "this is javascript and i am learning";
-let b =a.split(" ");
-let newAr = [];
+var string = "Welcome to this Javascript Guide!";
+var len = string.length
+var rev = '';
 
-for (var i of b) {
-    newAr.push(i.length)
+for (var i=len-1; i>=0; i--) {
+    rev+=string[i]
+
 }
-let sor = newAr.sort(function (a,b){
-    return b-a;
-})
-let result = b.filter((val)=> val.length === sor[0])
-console.log(result.join(""))
-console.log(sor[0])
+console.log(rev)

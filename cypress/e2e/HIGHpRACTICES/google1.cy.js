@@ -10,7 +10,7 @@ const items =
 context("iterations on google search", () => {
 
     const getResults = new iterationLocators();
-    it.skip("practice iterations", () => {
+    it("practice iterations", () => {
         cy.visit("https://www.google.com/")
         items.forEach((el, index) => {
             getResults.searchElement().as('clearField').type(`${items[index]}`)
@@ -25,7 +25,7 @@ context("iterations on google search", () => {
         })
 
     })
-    it("windows handle or handlew tabs", ()=>{
+    it("windows handle or handlew tabs", () => {
         cy.viewport(800, 540)
 
         cy.visit("https://www.encodedna.com/javascript/demo/open-new-window-using-javascript-method.htm")
