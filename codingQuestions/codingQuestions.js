@@ -84,6 +84,28 @@ for (let word1 in repeated1) {
         console.log("repeated word is" + " " + word1)
     }
 }
+//another example
+//find repeated words from an array
+let arr5 = ["a b c d c d s e r t c s a b"]
+let arr6 = arr5.join("").split(" ");
+let repeated6 = {};
+let len6 = arr6.length;
+
+for(var i=0; i<len6; i++) {
+    let word6 = ar6r[i]
+    if(repeated6[word6] === undefined) {
+        repeated6[word6] = 1;
+    }
+    else{
+        repeated6[word6]++;
+    }
+}
+for(let word6 in repeated6) {
+    if(repeated6[word6] > 1){
+        console.log(word6)
+    }
+}
+console.log(repeated6)
 
 // remove duplicate characters using string as well as array
 
@@ -118,7 +140,7 @@ var len3 = arr3.length
 var unique1 = [];
 
 for (var i = 0; i < len3; i++) {
-    if (unique1.indexOf(arr3[i]) === -1) { //indexOf() method returns -1 if the value is not found
+    if (unique1.indexOf(arr3[i]) === -1) { //indexOf() method returns -1 if the value is not found - if the value is found it will return 1
         unique1.push(arr3[i]) //The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
     }
 }

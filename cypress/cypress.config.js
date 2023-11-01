@@ -11,7 +11,8 @@ module.exports = defineConfig({
     },
     env: {
       baseUrl: "https://colorhunt.co/palette/900c3fc70039f94c10f8de22",
-      background_color_website: "https://cssgradient.io/"
+      background_color_website: "https://cssgradient.io/",
+      dragAnddropWebsite: "https://demo.automationtesting.in/Static.html"
     }
     
   },

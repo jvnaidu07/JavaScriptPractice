@@ -1,11 +1,10 @@
-let a = [10,20,50,10,60,20,45,15]
-let b = a.length;
+let str = "mango banana mango apple orange apple grapes grapes orange"
+let arr = str.split(" ")
+let unique = [];
 
-let unique = []
-
-for (var i=0; i<b; i++) {
-    if (unique.indexOf(a[i]) === -1) {
-        unique.push(a[i])
+for (var i=0; i<arr.length; i++) {
+    if(unique.indexOf(arr[i]) == -1) {
+        unique.push(arr[i])
     }
 }
-console.log(unique)
+console.log(unique);
