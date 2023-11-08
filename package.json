@@ -1,8 +1,11 @@
 {
   "dependencies": {
+    "convert": "^4.13.2",
     "cypress": "^12.17.4",
     "cypress-real-events": "^1.10.3",
+    "excel-to-json": "^1.0.0",
     "neat-csv": "^5.2.0",
+    "node": "^21.1.0",
     "rgb-hex": "^4.1.0"
   },
   "scripts": {

@@ -1,8 +1,19 @@
+
 module.exports = {
   e2e: {
     failOnStatusCode: false,
     setupNodeEvents(on, config) {
       // implement node event listeners here
+      on('task', {
+        excelToJsonConverter(filepath) {
+          const result = excelToJson({
+            source: readFileSync(filepath)
+          });
+          return result;
+
+        }
+      })
+
     },
     env: {
       "viewportHeight": 1080,
