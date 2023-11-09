@@ -1,3 +1,4 @@
+
 // assignment palindrome
 var str = "race car";
 var str = str.replace(" ", "")
@@ -19,3 +20,17 @@ else {
 
 var result = str === palin ? "palindrome" : "not a palindrome"
 console.log(result)
+
+//convert string to number
+var str = "9";
+console.log(typeof(+str))
+//convert number to string
+let strr = 9;
+console.log(typeof(strr+" "))
+//javascript string ,ethods
+//trim(),charAt(), concat(), indexOf(),lastIndexOf()
+//slice, tostring,substring,toUppercase,toLowercase etcc..
+//undefined
+let srt;
+console.log(srt)//non-existing property will return undefined
+//null -- there is no value will return null

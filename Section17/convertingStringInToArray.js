@@ -21,3 +21,7 @@ console.log(res)
 
 var numb = parseInt("215485")
 console.log(numb)
+
+var str = "1,2,3,4,5,6";
+var res = str.replace(",")
+console.log(res)

@@ -17,3 +17,12 @@ var person = {
     }
 }
 console.log(person.myName)
+let obj1 = {
+    n : "akaa",
+    n1: "wed",
+    n2: "esf",
+    get proper() {
+        return this.n+ this.n1 + this.n2
+    }
+}
+console.log(obj1.proper)

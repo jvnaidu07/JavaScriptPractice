@@ -14,7 +14,7 @@
 // JSON Path
 
 var branches = {
-    "name": "university",
+    "name": "Engineering College",
     "listOfBranches": [
         {
             "branchName": "ece",
@@ -46,4 +46,6 @@ console.log(branches.listOfBranches[0].branchName)
 console.log(branches.listOfBranches[1].branchName)
 console.log(branches.listOfBranches[2].branchName)
 console.log(branches.listOfBranches[3].branchName)
+console.log(branches.listOfBranches[3].passOrFail)
 
+console.log(branches.name)

@@ -3,7 +3,7 @@ function palindromeCheck(word) {
     console.log(reverse);
 
 
-    var res = word === reverse ? "palindrome" : "not a palindrome"
+    var res = word === reverse ? "palindrome" : "not a palindrome" //? : - conditional operators
     console.log(res)
 
     if (word.toLowerCase() == reverse.toLowerCase()) {

@@ -1,5 +1,5 @@
 // using filter
-var num = [1,2,3,4,5,6,8,10,12,14]
+var num = [1,2,3,4,5,6,8,10,12,14,15]
 var newArr = num.filter(isEven)
 
 function isEven(value, index, array){
@@ -14,3 +14,14 @@ function isOdd(value, index, array) {
     return value % 2 !== 0;
 }
 console.log(newA)
+
+for (var i=0; i<num.length; i++) {
+    if (num[i] % 2 ==0 ) {
+        console.log(num[i])
+    }
+}
+for (var i=0; i<num.length; i++) {
+    if (num[i] % 2 !=0 ) {
+        console.log(num[i])
+    }
+}
