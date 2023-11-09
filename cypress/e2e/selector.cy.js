@@ -14,5 +14,11 @@ class practices{
     selectIndia() {
         return cy.get("select[name='country']")
     }
+    enterAdminCredentials(index) {
+        return cy.get("tbody tr td input").eq(index)
+    }
+    lengthOfTheElements() {
+        return cy.get("tbody tr td input")
+    }
 }
 export default practices

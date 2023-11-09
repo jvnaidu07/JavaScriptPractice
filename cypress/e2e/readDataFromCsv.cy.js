@@ -11,7 +11,7 @@ describe("read data from csv", ()=>{
         .then(data =>{
             table = data;
 
-        }).then(console.table)
+        }).then(console.table);
     })
     beforeEach(()=>{
         cy.fixture('csvfile1').then(neatCSV)
