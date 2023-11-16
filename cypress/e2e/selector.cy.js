@@ -20,5 +20,8 @@ class practices{
     lengthOfTheElements() {
         return cy.get("tbody tr td input")
     }
+    dropdownvalue() {
+        return cy.get('select')
+    }
 }
 export default practices
