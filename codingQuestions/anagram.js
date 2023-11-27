@@ -20,3 +20,13 @@ else {
 
 console.log(str1);
 console.log(r2)
+
+
+// consider function
+let isAnagram = function(s1, s2) {
+    let sorted1 = s1.split("").sort().join("").toUpperCase() // sort them alphabetically
+    let sorted2 = s2.split("").sort().join("").toUpperCase()
+
+    return (sorted1 === sorted2)
+}
+console.log(isAnagram('level', 'level'));

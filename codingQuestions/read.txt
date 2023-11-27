@@ -1,0 +1,13 @@
+javascript coding questions
+1. find even numbers from 1 to 100;
+2.find odd umbers from 1 to 100;
+3. calculate sum using arrays
+4.calculate average using array
+5.calculate length of the string/array
+6.find numbers of words using string/array
+7.find number of characters in string/array
+8.
+
+
+
+
