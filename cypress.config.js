@@ -23,7 +23,8 @@ module.exports = {
       background_color_website: "https://cssgradient.io/shades-of-blue/",
       dragAnddropWebsite: "https://demo.automationtesting.in/Static.html",
       loginPage: "https://demo.guru99.com/test/newtours/login.php",
-      registerPage: "https://demo.guru99.com/test/newtours/register.php"
+      registerPage: "https://demo.guru99.com/test/newtours/register.php",
+      github: "https://github.com/"
     }
   },
 };

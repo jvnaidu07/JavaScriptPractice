@@ -1,3 +1,4 @@
+import gitHub from "../e2e/githubSelectors/gitHubStore.cy";
 import practices from "../e2e/selector.cy"
 import { domColors } from "../fixtures/colorObj"
 
@@ -82,5 +83,18 @@ Cypress.Commands.add("titles", () => {
 
     })
 });
+
+const githubPractice = new gitHub();
+Cypress.Commands.add("Login", (userName, password) => {
+    githubPractice.githubUserName().type(userName);
+    githubPractice.girhubPassword().type(password);
+    // cy.get("input[name='login']").type(userName);
+    // cy.get("input[type='password']").type(password);
+    //userName: jvnaidu07, pass: Jupalle@123
+});
+Cypress.Commands.add("githubUrlAssertions", () => {
+    cy.url().should("include", "github");
+    cy.url().should('eq', 'https://github.com/');
+})
 
 
