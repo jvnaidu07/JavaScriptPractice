@@ -15,8 +15,6 @@ context("find headers in github", () => {
 
         ]
 
-
-
     it("", () => {
         cy.viewport(1250, 660)
         cy.visit(Cypress.env("githubb"))
@@ -40,18 +38,26 @@ context("find headers in github", () => {
         })
         cy.githubUrlAssertions();
     });
+    const listOfProducts =
+        [
+            "Actions", "Packages", "Security", "Codespaces", "Copilot", "Code review", "Issues", "Discussions", "GitHub Sponsors", "The ReadME Project"
+        ]
     it.only("using for loop", () => {
         cy.viewport(1250, 660)
+
         cy.visit(Cypress.env("githubb"))
         //cy.Login('jvnaidu07', 'Jupalle@123');
         gitPractice.gitLength().should('have.length', 3);
         gitPractice.gitLength().each(($el, index) => {
             cy.wrap($el, { timeout: 6000 }).should('contain.text', `${gitHeaders[index]}`)
         });
-
         cy.githubUrlAssertions();
+        gitPractice.listOfProElements().as('proHeaders').should('have.length', 10);
+        cy.get(".d-lg-flex.list-style-none li button").first().realHover()
+        cy.get('@proHeaders').each(($el, index) => {
+            cy.wrap($el).should('have.text', `${listOfProducts[index]}`)
+        })
     });
-
 })
 
 
@@ -63,4 +69,3 @@ is available or not. so you must use the .invoke() function to wait until the el
             expect($text.trim()).eq(`${gitHeaders}`)
 
 */
-//cy.get("div").invoke("text").then((text) => text.trim()).should("equal", "Tag1");

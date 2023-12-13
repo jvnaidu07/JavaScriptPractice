@@ -14,5 +14,8 @@ class gitHub{
     moreOptions() {
         return cy.get(".AppHeader-globalBar-start deferred-side-panel", {timeout:60000})
     }
+    listOfProElements() {
+        return cy.get(".list-style-none.f5 li a div div")
+    }
 }
 export default gitHub
