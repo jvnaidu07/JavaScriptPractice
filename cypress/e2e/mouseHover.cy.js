@@ -15,7 +15,7 @@ describe("mouse hover", () => {
         "New Ladies High Wedge Heel Toe Thong Diamante Flip Flop Sandals", "Womens high heel point toe stiletto sandals ankle strap court shoes",
         "Fiorella Purple Peep Toes", "Ruby Shoo Womens Jada T-Bar"
     ]
-    it.only("mouse over ", () => {
+    it("mouse over ", () => {
         cy.visit("https://automationteststore.com/")
         cy.get(".nav-pills.categorymenu li").contains("Apparel & accessories", { timeout: 60000 }).realHover('mouse')
         cy.contains('Shoes').should('be.visible').click({ force: true })

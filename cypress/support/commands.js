@@ -96,6 +96,15 @@ Cypress.Commands.add("githubUrlAssertions", () => {
     cy.url().should("include", "github");
     cy.url().should('eq', 'https://github.com/');
 })
+const rahulHeaders =
+[
+    "Home", "Courses", "Lifetime Access", "Learning Path", "Mentorship", "Consulting", "Practice", "Blog", "About"
+]
+Cypress.Commands.add("rahulPageHeaders", () =>{
+    cy.get(".navigation.clearfix li a").each(($el, index) =>{
+        cy.wrap($el).should(`contain.text`, `${rahulHeaders[index]}`)
+    })
+})
 
 
 

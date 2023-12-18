@@ -17,5 +17,11 @@ class gitHub{
     listOfProElements() {
         return cy.get(".list-style-none.f5 li a div div")
     }
+    listOfTitles(index) {
+        return cy.get(".d-lg-flex.list-style-none li button").eq(index)
+    }
+    NavigateToSolutions() {
+        return this.listOfTitles(1)
+    }
 }
 export default gitHub

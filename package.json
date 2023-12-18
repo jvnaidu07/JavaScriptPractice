@@ -14,9 +14,20 @@
     "cy:parallel": "cypress-parallel -s cy:run -t 2 -d cypress/e2e/colors.cy.js",
     "runSingle_folder": "npx cypress run --spec cypress/e2e/API",
     "runApi": "npx cypress run --spec cypress/e2e/HIGHpRACTICES",
-    "runSingleFilee": "npx cypress run --spec cypress\\e2e\\HIGHpRACTICES\\google1.cy.js run"
+    "runSingleFilee": "npx cypress run --spec cypress\\e2e\\HIGHpRACTICES\\google1.cy.js run",
+    "runGitWeb": "npx cypress run --spec cypress/e2e/gitHub.cy.js",
+    "consoleSpec_js": "npx cypress run --spec cypress/e2e/consoleLog.cy.js",
+    "dragAndDrop": "cypress/e2e/DragAndDrop.cy.js", 
+    "dragAndDropThroughJenkins": "npx cypress run --spec cypress/e2e/DragAndDrop.cy.js",
+    "file_upload": "cypress/e2e/fileUpload.cy.js",
+    "file_upload_through_jenkins": "npx cypress run --spec cypress/e2e/fileUpload.cy.js",
+    "forLoopSpec": "npx cypress run --spec cypress/e2e/forLoop.cy.js",
+    "mouseHover": "npx cypress run --spec cypress/e2e/mouseHover.cy.js",
+    "readDataFromCsv_spec": "npx cypress run --spec cypress/e2e/readDataFromCsv.cy.js",
+    "cypressApi": "npx cypress run --spec cypress/e2e/API/JsonSchema.cy.js"
   },
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^2.2.4"
   }
 }
+

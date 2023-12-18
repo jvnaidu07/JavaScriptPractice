@@ -34,6 +34,8 @@ context("practice auto complete scenario", () => {
         credentials.enterAdminCredentials(6).type(table[0]['city']).should('have.value', table[0]['city'])
         credentials.enterAdminCredentials(7).type(table[0]['state']).should('have.value', table[0]['state'])
         credentials.enterAdminCredentials(8).type(table[0]['postalCode']).should('have.value', table[0]['postalCode'])
+        cy.get("select[name='country']").select('ARUBA')
+
         credentials.enterAdminCredentials(9).type(table[1]['userName']).should('have.value', table[1]['userName'])
         credentials.enterAdminCredentials(10).type(table[1]['password']).should('have.value', table[1]['password'])
         credentials.enterAdminCredentials(11).type(table[1]['confirmPassword']).should('have.value', table[1]['confirmPassword'])
@@ -55,7 +57,8 @@ context("practice auto complete scenario", () => {
         credentials.enterAdminCredentials(5).type(address).should('have.value', address)
         credentials.enterAdminCredentials(6).type(city).should('have.value', city)
         credentials.enterAdminCredentials(7).type(state).should('have.value', state)
-        credentials.enterAdminCredentials(8).type(postalCode).should('have.value', postalCode)
+        credentials.enterAdminCredentials(8).type(postalCode).should('have.value', postalCode);
+        cy.get("select[name='country']").select('ARUBA')
         credentials.enterAdminCredentials(9).type(userName).should('have.value', userName)
         credentials.enterAdminCredentials(10).type(password).should('have.value', password)
         credentials.enterAdminCredentials(11).type(confirmPassword).should('have.value', confirmPassword)
@@ -75,7 +78,7 @@ context("practice auto complete scenario", () => {
         [
             'Choose', 'Flight #', 'Airline', 'Departs: ', 'Arrives: ', 'Price'
         ]
-    it.only("find total price", () => {
+    it("find total price", () => {
         cy.visit("https://blazedemo.com/reserve.php")
         cy.get("tr th").should('have.length', 6)
         cy.get('tr th').each(($el, index) => {

@@ -18,7 +18,7 @@ context("file upload", () => {
         cy.visit("https://the-internet.herokuapp.com/upload")
         cy.get("#drag-drop-upload").last().attachFile('test1.xlsx', { subjectType: 'drag-n-drop' })
     })
-    it.only("file upload drag and rop", () => {
+    it("file upload drag and rop", () => {
         cy.visit("https://courses.rahulshettyacademy.com/")
         cy.get(".navigation.clearfix").should('have.attr', 'class', 'navigation clearfix')
         cy.rahulPageHeaders();

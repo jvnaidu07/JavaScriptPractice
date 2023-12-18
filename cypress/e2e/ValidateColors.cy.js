@@ -54,7 +54,6 @@ describe("assert color boxes", () => {
         cy.get("#customers td").contains(company).should('have.text', company)
         cy.contains(contact).should('have.text', contact)
         cy.contains(country).should('have.text', country)
-
     }
 
 

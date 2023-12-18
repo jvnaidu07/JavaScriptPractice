@@ -19,7 +19,7 @@ describe("read data from csv", ()=>{
             table1 = data;
         })
     })
-    it.skip("get the data from xl", ()=>{
+    it("get the data from xl", ()=>{
         const randomRow = Math.floor(Math.random() * table.length)
         cy.visit("http://online.myschoolerp.com/Login.aspx")
         cy.get("#txtUserID").type(table[0]['username'])

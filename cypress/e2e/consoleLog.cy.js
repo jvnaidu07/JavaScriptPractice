@@ -49,7 +49,14 @@ describe("read data from csv", () => {
         "background: #000000 no-repeat center; background-size: initial;", "background: #8f8f8f no-repeat center; background-size: initial;",
         "background: #53a828 no-repeat center; background-size: initial;"]
 
-    it.only("", () => {
+
+
+
+    const productTitles =
+        ["Breathe-Easy Tank", "Antonia Racer Tank", "Maya Tunic", "Chloe Compete Tank", "Leah Yoga Top","Nona Fitness Tank",
+        "Nora Practice Tank", "Zoe Tank", "Bella Tank", "Lucia Cross-Fit Bra", "Prima Compete Bra Top","Celeste Sports Bra", "\n\n\n\n"]
+
+    it("", () => {
         //cy.viewport(550,600)
         cy.visit("https://magento.softwaretestingboard.com/")
         cy.get(".product-item-details div div div .swatch-option.color", { timeout: 60000 }).each((el, index) => {
@@ -71,15 +78,13 @@ describe("read data from csv", () => {
         cy.get(".level-top.ui-corner-all").eq(1).trigger('mouseover');
         cy.contains('Gear').trigger('mouseover')
         cy.contains('Training').trigger('mouseover')
-        cy.get(".level-top.ui-corner-all", {timeout:30000}).eq(2).trigger('mouseover');
-        cy.contains('Tops').click({force:true});
-        cy.titles();
-        // const productTitles = ["\n\nBreathe-Easy Tank \n", "\n\nAntonia Racer Tank \n","\n\nMaya Tunic \n","\n\nChloe Compete Tank \n", "\n\nLeah Yoga Top \n",
-        // "\n\nNona Fitness Tank \n", "\n\nNora Practice Tank \n","\n\nZoe Tank \n","\n\nBella Tank \n","\n\nLucia Cross-Fit Bra \n","\n\nPrima Compete Bra Top \n",
-        // "\n\nCeleste Sports Bra \n", "\n\n\n\n"]
-        // cy.get(".product-item-info strong").each((el,index)=>{
-        //     cy.wrap(el).should('have.text', `${productTitles[index]}`)
+        cy.get(".level-top.ui-corner-all", { timeout: 30000 }).eq(2).trigger('mouseover');
+        cy.contains('Tops').click({ force: true });
+        //cy.titles();
 
-        // })
+        cy.get(".product-item-info strong").each((el, index) => {
+            cy.wrap(el).should(`contain.text`, `${productTitles[index]}`)
+
+        })
     })
 })

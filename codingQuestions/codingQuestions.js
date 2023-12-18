@@ -51,7 +51,7 @@ var repeated = {};
 
 for (var i = 0; i < lenn; i++) {
     let word = arrr[i]
-    if (repeated[word] === undefined) {
+    if (repeated[word] === undefined) { // undefined it is not return any value
         repeated[word] = 1;
     }
     else {

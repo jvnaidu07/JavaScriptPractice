@@ -42,21 +42,39 @@ context("find headers in github", () => {
         [
             "Actions", "Packages", "Security", "Codespaces", "Copilot", "Code review", "Issues", "Discussions", "GitHub Sponsors", "The ReadME Project"
         ]
-    it.only("using for loop", () => {
+
+    const ListOfSolutionItems = [
+
+        "Enterprise", "Teams", "Startups", "Education", "CI/CD & Automation", "DevOps", "DevSecOps", "Sponsors", "The ReadME Project"
+
+    ]
+
+    it("using for loop", () => {
         cy.viewport(1250, 660)
 
         cy.visit(Cypress.env("githubb"))
         //cy.Login('jvnaidu07', 'Jupalle@123');
-        gitPractice.gitLength().should('have.length', 3);
-        gitPractice.gitLength().each(($el, index) => {
-            cy.wrap($el, { timeout: 6000 }).should('contain.text', `${gitHeaders[index]}`)
+        cy.get(".mt-0.px-3.px-lg-0.mb-3.mb-lg-0").within(() => {
+
+
+            gitPractice.gitLength().should('have.length', 3);
+            gitPractice.gitLength().each(($el, index) => {
+                cy.wrap($el, { timeout: 6000 }).should('contain.text', `${gitHeaders[index]}`)
+            });
+            cy.githubUrlAssertions();
+            gitPractice.listOfProElements().as('proHeaders').should('have.length', 10);
+            gitPractice.NavigateToSolutions().as('mainHeaders').first().realHover();
+            cy.get('@proHeaders').each(($el, index) => {
+                cy.wrap($el).should('have.text', `${listOfProducts[index]}`)
+            });
+            cy.get('@mainHeaders').should('contain.text', 'Solutions').realHover();
+            cy.get(".border-bottom.pb-3.mb-3 span").should('have.length', 2);
+
+            cy.get(".border-bottom.pb-3.mb-3 ul li a").each((item, index) => {
+                cy.wrap(item).should('contain.text', `${ListOfSolutionItems[index]}`)
+            });
         });
-        cy.githubUrlAssertions();
-        gitPractice.listOfProElements().as('proHeaders').should('have.length', 10);
-        cy.get(".d-lg-flex.list-style-none li button").first().realHover()
-        cy.get('@proHeaders').each(($el, index) => {
-            cy.wrap($el).should('have.text', `${listOfProducts[index]}`)
-        })
+
     });
 })
 
