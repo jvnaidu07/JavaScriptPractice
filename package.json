@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "convert": "^4.13.2",
-    "cypress": "^12.17.4",
     "cypress-parallel": "^0.14.0",
     "cypress-real-events": "^1.10.3",
     "excel-to-json": "^1.0.0",
@@ -29,6 +28,7 @@
     "schemaValidation": "npx cypress run --spec cypress/e2e/API/parsingJsonData.cy.js"
   },
   "devDependencies": {
-    "@4tw/cypress-drag-drop": "^2.2.4"
+    "@4tw/cypress-drag-drop": "^2.2.4",
+    "cypress": "^13.6.2"
   }
 }
