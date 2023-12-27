@@ -14,6 +14,14 @@ javascript coding questions
 13.reverse using arrays
 14.get the string alphabitically
 15.print duplicat/repeated word 
+16.convert array of string into number (ex: ar['2321456321'])
+17. find maximum value from an aaray
+18. find minimum value from an aaray
+19. find maximum string from string/ minimum string
+20. descending order/ascending order from string/array
+21.what is anagram
+22.remove elements from the string/array
+23.
 
 
 

@@ -27,8 +27,11 @@ const getFilePathsByGlob = (pattern) => {
 
 async function getTestSuitePaths() {
   const isPattern = settings.testSuitesPath.includes('*');
+
   let fileList;
-  if (isPattern) {
+  if (settings.testSuitesPaths) {
+    fileList = settings.testSuitesPaths;
+  } else if (isPattern) {
     console.log(`Using pattern ${settings.testSuitesPath} to find test suites`);
     fileList = await getFilePathsByGlob(settings.testSuitesPath);
   } else {
@@ -46,11 +49,23 @@ async function getTestSuitePaths() {
 
   // We can't run more threads than suites
   if (fileList.length < settings.threadCount) {
-    console.log(`Thread setting is ${settings.threadCount}, but only ${fileList.length} test suite(s) were found. Adjusting configuration accordingly.`)
-    settings.threadCount = fileList.length
+    console.log(
+      `Thread setting is ${settings.threadCount}, but only ${fileList.length} test suite(s) were found. Adjusting configuration accordingly.`
+    );
+    settings.threadCount = fileList.length;
   }
 
   return fileList;
+}
+
+function getMaxPathLenghtFrom(testSuitePaths) {
+  let maxLength = 10;
+
+  for(let path of testSuitePaths){
+    maxLength = Math.max(maxLength, path.length);
+  }
+
+  return maxLength + 3;
 }
 
 function distributeTestsByWeight(testSuitePaths) {
@@ -87,7 +102,7 @@ function distributeTestsByWeight(testSuitePaths) {
     threads[0].list.push(key);
     threads[0].weight += +value;
   }
-  
+
   // Run slowest group first
   threads.sort((a, b) => b.weight - a.weight);
 
@@ -96,5 +111,6 @@ function distributeTestsByWeight(testSuitePaths) {
 
 module.exports = {
   getTestSuitePaths,
-  distributeTestsByWeight
+  distributeTestsByWeight,
+  getMaxPathLenghtFrom
 };
