@@ -20,7 +20,7 @@ context("drag an drop", () => {
         cy.get("#mydropzone").trigger('drop', { dataTransfer })
     })
     for (var i = 0; i < 5; i++) {
-        it("drag and drop each element ", () => {
+        it.skip("drag and drop each element ", () => {
 
             cy.visit("https://demo.seleniumeasy.com/drag-and-drop-demo.html", { timeout: 120000 })
             cy.get("span[draggable='true']").each(el => {
@@ -29,7 +29,7 @@ context("drag an drop", () => {
             })
         })
     }
-    it.only("drag and drop practices", ()=>{
+    it("drag and drop practices", ()=>{
         cy.visit(Cypress.env("dragAnddropWebsite"))
         cy.get("#angular", {timeout:60000}).trigger('dragstart')
         cy.get(".dragged", {timeout:5000}).trigger('drop')

@@ -27,7 +27,6 @@ import { domColors } from "../fixtures/colorObj"
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-require("@4tw/cypress-drag-drop");
 Cypress.Commands.add("validateText", (country, city, height, built, rank) => {
     cy.get("tbody[style='margin:0;padding:0'] td").contains(country).should('have.text', country)
     cy.contains(city).should('have.text', city)
