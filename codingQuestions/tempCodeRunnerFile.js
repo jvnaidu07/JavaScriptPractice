@@ -11,5 +11,3 @@ if (l1 == l2) {
 else {
     console.log('not a anagram');
 }
-
-
