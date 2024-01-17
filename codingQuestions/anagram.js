@@ -4,8 +4,6 @@ let b = 'silenT';
 let str1 =  a.toUpperCase()
 let str2 = b.toUpperCase()
 
-let l1 = str1.length;
-let l2 = str2.length;
 
 
 let r1 = str1.split("").sort().join("")
