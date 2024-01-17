@@ -71,4 +71,4 @@ let arr4 = [1,2,32,1,4,56,21,5]
 
 let res2 = arr4.reduce((total, current) => total + current)
 
-console.log(res2)
+console.log(res2);
