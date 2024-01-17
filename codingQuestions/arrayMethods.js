@@ -1,4 +1,3 @@
-const { log } = require("console");
 
 // convert string from arrays
 let arr = ["l", "a", "c", "v","b","f","g"]

@@ -7,7 +7,8 @@
     "excel-to-json": "^1.0.0",
     "neat-csv": "^5.2.0",
     "node": "^21.1.0",
-    "rgb-hex": "^4.1.0"
+    "rgb-hex": "^4.1.0",
+    "xpath": "^0.0.34"
   },
   "scripts": {
     "cy:run": "cypress run",
