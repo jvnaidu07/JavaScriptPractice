@@ -56,7 +56,7 @@ describe("read data from csv", () => {
         ["Breathe-Easy Tank", "Antonia Racer Tank", "Maya Tunic", "Chloe Compete Tank", "Leah Yoga Top","Nona Fitness Tank",
         "Nora Practice Tank", "Zoe Tank", "Bella Tank", "Lucia Cross-Fit Bra", "Prima Compete Bra Top","Celeste Sports Bra", "\n\n\n\n"]
 
-    it("", () => {
+    it.only("", () => {
         //cy.viewport(550,600)
         cy.visit("https://magento.softwaretestingboard.com/")
         cy.get(".product-item-details div div div .swatch-option.color", { timeout: 60000 }).each((el, index) => {
