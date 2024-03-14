@@ -64,7 +64,7 @@ let filt = [
 
 let res = filt.filter((p) => p.name === "sarah")
 
-console.log(res);
+console.log("filter result" + " " + res);
 
 //reduce 
 let arr4 = [1,2,32,1,4,56,21,5]

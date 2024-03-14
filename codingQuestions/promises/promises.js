@@ -40,4 +40,3 @@ let countValue = new Promise(function(resolve, reject) {
 });
 console.log(countValue)
 
-

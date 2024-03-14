@@ -6,13 +6,13 @@ function employee(id, name, salary) {
     this.salary = salary
 }
 e = new employee(101, "venkat", 200)
-console.log(e.id + ' ' + e.name + ' ' + e.salary)
+console.log(e.id + ' ' + e.name + ' ' + e.salary);
 
 function Person() {
     this.firstName = 'venkat',
         this.lastName = 'naidu'
 }
-const person = new Person()
+const person = new Person();
 console.log(person.firstName + ' ' + person.lastName);
 
 function Person1(first, last) {

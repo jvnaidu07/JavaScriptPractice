@@ -1,6 +1,5 @@
-function settimeout() {
-//     settimeout(() => {
-//         console.log('print this result at last')
-//     }, 5000)
-// }
-// console.log('javascript')
+
+let int = 6541655;
+let str = int.toString();
+let arr = str.split("")
+console.log(arr);
