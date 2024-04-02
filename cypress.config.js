@@ -1,4 +1,8 @@
 
+const { defineConfig } = require('cypress')
+// https://github.com/bahmutov/cypress-await
+const cyAwaitPreprocessor = require('cypress-await/src/preprocessor')
+
 module.exports = {
   e2e: {
     failOnStatusCode: false,

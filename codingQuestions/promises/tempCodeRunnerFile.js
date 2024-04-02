@@ -1,5 +1,7 @@
-
-let int = 6541655;
-let str = int.toString();
+let num = 67687654;
+let str = num.toString();
 let arr = str.split("")
-console.log(arr);
+let ar = arr.$(selector).remove('');
+
+
+console.log(ar);
