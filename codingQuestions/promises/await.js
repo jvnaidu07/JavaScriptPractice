@@ -18,8 +18,10 @@ async function calc2() {
 }
 
 async function calc3() {
-    x = 5 + 7;
-    return x;
+    await setTimeout(() =>{
+        x = 5+7;
+        console.log(x)
+    },5000)
 }
 
 console.log(calc());

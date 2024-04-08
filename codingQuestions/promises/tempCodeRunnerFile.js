@@ -1,7 +1,6 @@
-let num = 67687654;
-let str = num.toString();
-let arr = str.split("")
-let ar = arr.$(selector).remove('');
+let num = '67687654';
+let str = num.split("").map(Number).toString()
 
 
-console.log(ar);
+
+console.log(str);

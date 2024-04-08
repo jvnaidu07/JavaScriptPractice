@@ -16,7 +16,7 @@ class Person { // class declaration - inside the class we can create constructor
 }
 
 let result = new Person('Steve', 'Male', 1999);
-result.calAge()
+result.calAge();
 console.log(result);
 
 

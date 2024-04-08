@@ -16,7 +16,7 @@ var str1 = "this is javascript and i am learning"
 var arr = str1.split(" ")
 var newArr = [];
 
-for (let i of arr) {
+for (let i of arr) {    // for in it will start from index 0 - for off loop it will start as usual
     newArr.push(i.length)
 }
 
@@ -131,7 +131,7 @@ for (var i = 0; i < len3; i++) {
         max = arr3[i]
     }
 }
-console.log(max)
+console.log(max);
 
 // remove duplicate words from string
 var str3 = "mango apple orange mango banana guava grapes apple orange"
