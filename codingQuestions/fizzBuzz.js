@@ -2,19 +2,39 @@
 //if start divisible by 3 print fizz
 //if end divisible by 5 print buzz
 //if number divisible by both 3 and 5 print fizzBuzz
-function fizzBuzz(start, end) {
+let n = 10;
 
-    if( start %3 == 0 ){
-        console.log("this is fizz")
+for (var i=0; i<n; i++) {
+    if (i % 3 == 0 && i % 5 == 0) {
+        console.log("FizzBuzz");
     }
-    else if (end %5 == 0) {
-        console.log("this is buzz")
+    else if ( i % 3 == 0) {
+        console.log("Fizz");
     }
-    else if (start % 3 == 0 && end % 5 == 0) {
-        console.log("print fizzBuzz")
+    else if ( i % 5 == 0) {
+        console.log("Buzz");
     }
     else {
-        console.log("print no number matching")
+        console.log(i);
     }
 }
-fizzBuzz(3, 9)
+
+// using functions
+
+function fizzBuzz(i, j) {
+
+    if (i % 3 == 0 && j % 5 == 0) {
+        console.log("FizzBuzz");
+    }
+    else if ( i % 3 == 0) {
+        console.log("Fizz");
+    }
+    else if ( j % 5 == 0) {
+        console.log("Buzz");
+    }
+    else {
+        console.log(i,j);
+    }
+
+}
+console.log(fizzBuzz(3,5));

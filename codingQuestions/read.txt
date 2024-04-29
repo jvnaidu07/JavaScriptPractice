@@ -21,7 +21,19 @@ javascript coding questions
 20. descending order/ascending order from string/array
 21.what is anagram
 22.remove elements from the string/array
-23.
+23.find missing element in an array
+24.async and await 
+25.Promises in javascript
+26.What is setTimeout
+27.convert array from string
+28.convert string from array
+29.What is anagram
+30.What are the alerts in javascript
+31.How to use SET for to remove duplicates
+32.What is Constructor in javascript
+33.OOps in javascript (abstraction, polymorphism, inheritence, encapsulation)
+34.What is difference between == and === in javascript
+
 
 
 

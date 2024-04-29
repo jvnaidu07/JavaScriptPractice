@@ -28,7 +28,8 @@
     "readDataFromCsv_spec": "npx cypress run --spec cypress/e2e/readDataFromCsv.cy.js",
     "cypressApi": "npx cypress run --spec cypress/e2e/API/JsonSchema.cy.js",
     "schemaValidation": "npx cypress run --spec cypress/e2e/API/parsingJsonData.cy.js",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "automationStore": "npx cypress run --spec cypress/e2e/HIGHpRACTICES/automationStore.cy.js"
   },
   "devDependencies": {
     "cypress": "^13.7.1"

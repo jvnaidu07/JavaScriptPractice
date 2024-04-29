@@ -1,4 +1,14 @@
-let str = "this is summer season";
-let totalStringLength = str.length;
-let totalLengthWithoutSpace = str.split(" ").join("")
-console.log(totalLengthWithoutSpace);
+let arr = ["mango", "orange", "apple", "grapes", "dragonFruit", "banana"]
+
+let res = arr.forEach(n =>{
+    console.log(n.length);
+});
+
+let res1 = arr.forEach(n =>{
+    console.log(n.toUpperCase());
+});
+
+let res2 = arr.forEach(n =>{
+    console.log(n.toLowerCase());
+});
+

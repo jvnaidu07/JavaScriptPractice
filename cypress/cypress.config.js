@@ -1,4 +1,9 @@
+
 module.exports = defineConfig({
+  video: true,
+})
+module.exports = defineConfig({
+  
   projectId: '35ki3n',
   //chromeWebSecurity: false
 
@@ -9,6 +14,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
+    
     env: {
       baseUrl: "https://colorhunt.co/palette/900c3fc70039f94c10f8de22",
       background_color_website: "https://cssgradient.io/",

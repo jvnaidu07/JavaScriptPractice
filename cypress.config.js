@@ -1,24 +1,18 @@
-
 const { defineConfig } = require('cypress')
-// https://github.com/bahmutov/cypress-await
-const cyAwaitPreprocessor = require('cypress-await/src/preprocessor')
 
-module.exports = {
+module.exports = defineConfig({
+  // These settings apply everywhere unless overridden
+  defaultCommandTimeout: 5000,
+  viewportWidth: 1000,
+  viewportHeight: 600,
+  video: true,
+  videoCompression: 32,
+  videoUploadOnPasses: true,
+  // Viewport settings overridden for component tests
+  // Command timeout overridden for E2E tests
   e2e: {
-    failOnStatusCode: false,
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-      on('task', {
-        excelToJsonConverter(filepath) {
-          const result = excelToJson({
-            source: readFileSync(filepath)
-          });
-          return result;
-
-        }
-      })
-
-    },
+    pageLoadTimeout: 30000,
+    defaultCommandTimeout: 10000,
     env: {
       "viewportHeight": 1080,
       "viewportWidth": 1920,
@@ -28,7 +22,12 @@ module.exports = {
       dragAnddropWebsite: "https://demo.automationtesting.in/Static.html",
       loginPage: "https://demo.guru99.com/test/newtours/login.php",
       registerPage: "https://demo.guru99.com/test/newtours/register.php",
-      githubb: "https://github.com/"
+      githubb: "https://github.com/",
+      automationStore: "https://automationteststore.com/"
     }
   },
-};
+})
+//Cypress.config('pageLoadTimeout', 100000)
+/*
+
+      */

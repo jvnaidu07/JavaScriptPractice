@@ -1,13 +1,18 @@
-//anagram
-let str = "triangle"
-let str1 = "integral"
 
-let l1 = str.toUpperCase().split("").sort().join("")
-let l2 = str1.toUpperCase().split("").sort().join("")
+// function fizzBuzz(start, end) {
 
-if (l1 == l2) {
-    console.log('given string is anagram')
-}
-else {
-    console.log('not a anagram');
-}
+//     if (start % 3 == 0 && end % 5 == 0) {
+//         console.log("FizzBuzz");
+//     }
+//     else if ( start % 3 == 0) {
+//         console.log("Fizz");
+//     }
+//     else if ( end % 5 == 0) {
+//         console.log("Buzz");
+//     }
+//     else {
+//         console.log(start, end);
+//     }
+
+// }
+// console.log(fizzBuzz(3,5));

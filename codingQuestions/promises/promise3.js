@@ -12,7 +12,6 @@ function add() {
             reject(sumOfAr)
         }, 15000);
     });
-
 }
 
-return add().then((val) =>{console.log(val)})
+return add().then((val) =>{console.log(val)});
