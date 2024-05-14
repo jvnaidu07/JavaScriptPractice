@@ -16,3 +16,9 @@ for(let word in count) {
         console.log(word)
     }
 }
+
+/*
+count{
+   ar[i] [1,1,2,3,3,4,5,1,2,3,4,3,2,1,2,3,5,6,6,7,6]
+}
+*/
