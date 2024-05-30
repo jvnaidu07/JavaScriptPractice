@@ -23,5 +23,3 @@ console.log(result);
 result.calFinalSalary();
 result.EmpDetails();
 
-
-
