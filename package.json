@@ -12,7 +12,7 @@
   },
   "scripts": {
     "cy:run": "cypress run",
-    "runSingleFile": "npx cypress run --spec cypress/e2e/colors.cy.js",
+    "runSingleFile": "npx cypress run --spec cypress/e2e/DragAndDrop.cy.js",
     "cy:parallel": "npx cy:parallel -s cy:run -t 1 -d cypress/e2e/forLoop.cy.js",
     "runSingle_folder": "npx cypress run --spec cypress/e2e/API",
     "runApi": "npx cypress run --spec cypress/e2e/HIGHpRACTICES",

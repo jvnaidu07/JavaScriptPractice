@@ -20,6 +20,20 @@ function rev() {    // normal function
     
 }
 console.log(rev());
+
+
+function rev(str) {
+    let len = str.length;
+    let rev = '';
+    
+    for (let i=len-1; i>=0; i--) {
+        rev += str[i]
+    }
+    return rev;
+}
+
+console.log(rev('java'))
+
 function max() {
     return new Promise((resolve, reject) =>{
         setTimeout(() =>{

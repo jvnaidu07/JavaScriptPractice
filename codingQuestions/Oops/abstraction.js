@@ -6,7 +6,7 @@ function Employee(name, age, baseSalary) {
     this.baseSalary = baseSalary;
     this.monthlyBonus = 1000;
     let basicInfo = 'abstaraction'      //this is private variable - can not access outside function
-
+    //“This” keyword refers to an object that is executing the current piece of code
 
     this.calFinalSalary = function () {
         let finalsala = this.baseSalary + this.monthlyBonus;

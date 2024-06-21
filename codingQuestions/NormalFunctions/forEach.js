@@ -20,7 +20,7 @@ function forEach(arr) {
 
 forEach(["mango", "orange", "apple", "grapes", "dragonFruit", "banana"])
 
-const Obj = {
+const Obj = {   //this is called object
     mango: "mango", orange: "orange", apple: "apple", grapes: "grapes", dragon: "dragonFruit", banana: "banana"
 }
 let arrr = []
