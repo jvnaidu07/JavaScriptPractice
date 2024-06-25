@@ -14,4 +14,6 @@ for(var i=0; i<len; i++) {
 }
 
 console.log(max)
-console.log(sendmax)
+console.log(sendmax);
+
+
