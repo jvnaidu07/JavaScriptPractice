@@ -1,8 +1,8 @@
 // there are three types of alerts - alert box - confirm box - prompt box
 
 //alert - Ok - confirm box -Ok/Cancel - prompt - asking for credentials
-const alert = alert("hello")
-console.log(alert);
+alert("hello")
+
 
 // confirm
 

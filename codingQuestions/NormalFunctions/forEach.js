@@ -3,6 +3,8 @@ let arr = ["mango", "orange", "apple", "grapes", "dragonFruit", "banana"]
 let res = arr.forEach(n => {
     console.log(n.length);
 });
+let result = arr.map(n => n.length)
+console.log(result);
 
 let res1 = arr.forEach(n => {
     console.log(n.toUpperCase());
@@ -20,6 +22,7 @@ function forEach(arr) {
 
 forEach(["mango", "orange", "apple", "grapes", "dragonFruit", "banana"])
 
+//object is a standalone entity with property and type or value
 const Obj = {   //this is called object
     mango: "mango", orange: "orange", apple: "apple", grapes: "grapes", dragon: "dragonFruit", banana: "banana"
 }

@@ -1,7 +1,7 @@
-// we can use wait only in sync functions
+// we can use await only in sync functions
 let num =0;
 async function increment () {
-    num += await 2;
+    num += await 1;
     console.log(num);
 }
 

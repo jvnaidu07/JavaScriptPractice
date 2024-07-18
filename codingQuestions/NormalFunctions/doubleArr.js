@@ -12,7 +12,7 @@ console.log(lengthWithoutSpace("this is summer season"));
 function sumOfArr(arr) {
 
     let len = arr.length;
-    let sum = 0;
+    let sum = arr[0];
 
     for (var i=0; i<len; i++) {
         sum += arr[i]
