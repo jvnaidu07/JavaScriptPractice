@@ -24,7 +24,8 @@ module.exports = defineConfig({
       registerPage: "https://demo.guru99.com/test/newtours/register.php",
       githubb: "https://github.com/",
       automationStore: "https://automationteststore.com/",
-      alertDemoWebsite: "https://vinothqaacademy.com/alertandpopup/"
+      alertDemoWebsite: "https://vinothqaacademy.com/alertandpopup/",
+      pagination: "https://www.amazon.in/s?k=mobiles&i=electronics&crid=1BL8K52UWVC2D&qid=1722271847&sprefix=mob%2Celectronics%2C577&ref=sr_pg_1"
     }
   },
 })

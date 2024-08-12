@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+/// <reference types="cypress" />
 describe("Test Contact Us form via Automation test store", () => {
 
     const googlePage = {

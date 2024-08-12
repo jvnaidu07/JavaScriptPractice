@@ -35,7 +35,6 @@ console.log(result);
 
 
 
-
 // let Person = class { // class expression
 
 // }

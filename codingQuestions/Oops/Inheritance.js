@@ -19,13 +19,13 @@ class thirdClass extends secondClass {
 }
 
 const class1 = new firstClass()
-console.log(class1.name());
+class1.name();
 
 const class2 = new secondClass()
-console.log(class2.age());
+class2.age()
 
 const class3 = new thirdClass()
-console.log(class3.gender());
+class3.gender()
 
 
 //parent class

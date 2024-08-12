@@ -7,7 +7,7 @@ class Student {
     }
 
     getName() {
-        return this.name;   // this is the keyword to represent class
+        return this.name;   // 'this' is the keyword to represent class
     }
     setName(name) {
         this.name = name;

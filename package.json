@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "ajv": "^8.12.0",
+    "chai-sorted": "^0.2.0",
     "convert": "^4.13.2",
     "cypress-parallel": "^0.14.0",
     "cypress-real-events": "^1.10.3",
@@ -32,7 +33,7 @@
     "automationStore": "npx cypress run --spec cypress/e2e/HIGHpRACTICES/automationStore.cy.js"
   },
   "devDependencies": {
-    "cypress": "^13.7.1"
+    "cypress": "^13.13.1"
   },
   "name": "javascript",
   "version": "1.0.0",
